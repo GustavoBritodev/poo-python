@@ -82,17 +82,17 @@ print("\nExemplo de Abstração: ")
 # Uma classe abstrata não tem a capacidade de criar objetos diretamente dela
 # Uma classe abstrata serve como um "molde" para outras classes. Isso ajuda a proteger os atributos e métodos que uma classe tem que respeitar quando ela for criada
 
-from abc import ABC, abstractclassmethod
+from abc import ABC, classmethod
 
 class Veiculo(ABC):
     
     # Decorador para que o interpretador entenda que se trata de um método abstrato
     # Isso significa que ao criar uma classe que utiliza a classe Veículo, obrigatoriamente ela vai ter que implementar esse método
-    @abstractclassmethod
+    @classmethod
     def ligar(self):
         pass
     
-    @abstractclassmethod
+    @classmethod
     def desligar(self):
         pass
     
